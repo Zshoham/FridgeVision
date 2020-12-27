@@ -38,10 +38,19 @@ Because the project relies on machine learning and the TensorFlow library, the p
 Before moving on, we want to stress that the project works perfectly fine on the CPU apart from slower runtimes.
 The GPU configuration is more complicated due to incompatibility between TensorFlow versions and anaconda distributions of those versions.
 This project requires Tensorflow version 2.3.* and does not support version 2.1.*. Those requirements and anaconda not properly installing drivers for the 2.3 distribution make the configuration for GPU more difficult.
+
+
 To install the GPU version, you must first create a conda environment with the following command :
-`conda create -n <env name> python=3.7 tensorflow-gpu=2.1 opencv pillow flask`
+```sh
+conda create -n <env name> python=3.7 tensorflow-gpu=2.1 opencv pillow flask
+```
 next install typer on this environment: 
-`conda install -c conda-forge typer `
+```sh
+conda install -c conda-forge typer 
+```
 now that the environment is ready with TensorFlow 2.1, you need to update TensorFlow manually using pip: 
-`pip install tensorflow-gpu==2.3` now the environment should be ready to run the project and use the GPU.
+```sh
+pip install tensorflow-gpu==2.3
+``` 
+now the environment should be ready to run the project and use the GPU.
 Finally, if you wish to recompile the webapp you must have [node.js](https://nodejs.org/en/) and [vue.js](https://cli.vuejs.org/guide/installation.html) installed
